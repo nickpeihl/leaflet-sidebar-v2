@@ -39,5 +39,6 @@
     "minify": "gulp minify",
     "zip": "gulp zip",
     "watch": "gulp watch"
-  }
+  },
+  "types": "index.d.ts"
 }
