@@ -21,7 +21,7 @@ declare module 'leaflet' {
         }
 
         interface SidebarOptions {
-            id: string;
+            container: any;
             position?: string;
             autopan?: boolean;
             closeButton?: boolean;
