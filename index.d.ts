@@ -3,30 +3,57 @@
 import * as L from 'leaflet';
 
 declare module 'leaflet' {
-    namespace control {
-        class Sidebar extends L.Control {
-            constructor(options?: SidebarOptions, deprecatedOptions?: SidebarOptions);
 
-            onAdd(map: L.Map): any;
-            onRemove(map: L.Map): this;
+    namespace Control {
+
+        interface SidebarOptions { // extends L.ControlOptions { // FIXME
+            container?: HTMLElement | string,
+            position?: 'left' | 'right',
+            autopan?: boolean,
+            closeButton?: boolean,
+        }
+
+        interface PanelOptions {
+            id: string,
+            tab: HTMLElement | string,
+            panel?: HTMLElement | string,
+            button?: EventListener,
+            disabled?: boolean,
+            position?: 'top' | 'bottom',
+            title?: string,
+        }
+
+        type SidebarEvents = 'opening' | 'closing' | 'content'
+
+        type SidebarEventHandlerFnMap = {
+            'opening'?: L.LeafletEventHandlerFn,
+            'closing'?: L.LeafletEventHandlerFn,
+            'content'?: L.LeafletEventHandlerFn,
+        }
+
+        export class Sidebar extends L.Evented { // extends L.Control { // FIXME
+            constructor(options?: SidebarOptions);
+            options: SidebarOptions;
+
             addTo(map: L.Map): this;
+            removeFrom(map: L.Map): this;
+
             open(id: string): this;
             close(): this;
-            onCloseClick(): this;
 
-            addPanel(data: any): this;
+            addPanel(data: PanelOptions): this;
             removePanel(id: string): this;
+
             enablePanel(id: string): this;
             disablePanel(id: string): this;
+
+            on(type: SidebarEvents, fn: L.LeafletEventHandlerFn, context?: any): this;
+            on(eventMap: SidebarEventHandlerFnMap): this;
         }
 
-        interface SidebarOptions {
-            container: any;
-            position?: string;
-            autopan?: boolean;
-            closeButton?: boolean;
-        }
+    }
 
-        function sidebar(options?: SidebarOptions, deprecatedOptions?: SidebarOptions): Sidebar;
+    namespace control {
+        export function sidebar(options?: Control.SidebarOptions): Control.Sidebar;
     }
 }
