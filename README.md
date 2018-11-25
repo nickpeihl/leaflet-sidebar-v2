@@ -5,20 +5,15 @@ A responsive sidebar _just_ for [Leaflet](http://leafletjs.com/). A fork of [sid
 ![Demo](doc/leaflet-sidebar-v2.gif)
 
 ## Why the Fork?
-- only supports leaflet (0.x and 1.x) to maintain a smaller codebase and support more features
-- compatibility with bootstrap (no generic `.sidebar` class)
-- provides a npm package `leaflet-sidebar-v2` with `main` and `style` fields in [`package.json`](package.json)
 - new features based on leaflet.js
     - JS API for panel modification
     - "autopan" feature, moving the map content next to the sidebar content
+- only supports leaflet (0.x and 1.x) to maintain a smaller codebase and support more features
+- compatibility with bootstrap (no generic `.sidebar` class)
+- provide a npm package `leaflet-sidebar-v2` with `main` and `style` fields in [`package.json`](package.json)
     
 ## Examples
- - [Simple example](http://www.npeihl.com/leaflet-sidebar-v2/examples/index.html)
- - [Autopanning of Map](http://www.npeihl.com/leaflet-sidebar-v2/examples/autopan.html)
- - [Right aligned](http://www.npeihl.com/leaflet-sidebar-v2/examples/position-right.html)
- - [Dynamic panel content](http://www.npeihl.com/leaflet-sidebar-v2/examples/leaflet-api.html)
- - [Leaflet v0.7 example](http://www.npeihl.com/leaflet-sidebar-v2/examples/leaflet-0.7.html)
- - [Adapt Sidebar to Map container size](http://www.npeihl.com/leaflet-sidebar-v2/examples/halfheight.html)
+in `examples` folder, available live at <https://nickpeihl.github.io/leaflet-sidebar-v2/examples>
 
 ## Usage
 

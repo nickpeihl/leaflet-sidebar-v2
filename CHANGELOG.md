@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.0.3 (2018-11-25)
+- fix repeated removal of panels (#24)
+
 ## v3.0.2 (2018-01-20)
 - support click listeners in html-markup-only variant (#17)
 
