@@ -24,14 +24,14 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-csslint": "^1.0.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-zip": "^4.0.0",
-    "jshint": "^2.9.5"
+    "gulp-clean-css": "^4.0.0",
+    "gulp-csslint": "^1.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-zip": "^4.2.0",
+    "jshint": "^2.9.6"
   },
   "scripts": {
     "test": "gulp lint",
