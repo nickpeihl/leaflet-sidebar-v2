@@ -31,7 +31,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-zip": "^4.2.0",
-    "jshint": "^2.9.6"
+    "jshint": "^2.9.7"
   },
   "scripts": {
     "test": "gulp lint",
