@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.0.4 (2018-12-10)
+- fix type definition (#24)
+
 ## v3.0.3 (2018-11-25)
 - fix repeated removal of panels (#24)
 
