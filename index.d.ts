@@ -16,7 +16,7 @@ declare module 'leaflet' {
         interface PanelOptions {
             id: string,
             tab: HTMLElement | string,
-            panel?: HTMLElement | string,
+            pane?: HTMLElement | string,
             button?: EventListener | string,
             disabled?: boolean,
             position?: 'top' | 'bottom',
