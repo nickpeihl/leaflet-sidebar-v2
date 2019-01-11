@@ -291,7 +291,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
      * @returns {L.Control.Sidebar}
      */
     addPanel: function(data) {
-        var i, pane, tab, tabHref, closeButtons, content;
+        var pane, tab, tabHref, closeButtons, content;
 
         // Create tab node
         tab = L.DomUtil.create('li', data.disabled ? 'disabled' : '');
@@ -321,14 +321,13 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
                 if (data.title)
                     content += '<h1 class="leaflet-sidebar-header">' + data.title;
                 if (this.options.closeButton)
-                    content += '<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>';
+                    content += '<span class="leaflet-sidebar-close"><i class="fa fa-caret-' + this.options.position + '"></i></span>';
                 if (data.title)
                     content += '</h1>';
                 pane.innerHTML = content + data.pane;
             } else {
                 // pane is given as DOM object
-                pane = data.pane;
-                this._paneContainer.appendChild(pane);
+                this._paneContainer.appendChild(data.pane);
             }
             pane.id = data.id;
 
