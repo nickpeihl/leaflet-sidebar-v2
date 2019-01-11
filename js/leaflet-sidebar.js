@@ -327,7 +327,8 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
                 pane.innerHTML = content + data.pane;
             } else {
                 // pane is given as DOM object
-                this._paneContainer.appendChild(data.pane);
+                pane = data.pane;
+                this._paneContainer.appendChild(pane);
             }
             pane.id = data.id;
 
