@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.0.6 (2019-01-11)
+- fix regression from v3.0.5
+
 ## v3.0.5 (2019-01-11)
 - apply container ID if specified in constructor options and not existing (#27)
 - fix wrongly initialized caret for `position: right` (#28)
