@@ -17,7 +17,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
     options: {
         autopan: false,
         closeButton: true,
-        container: '',
+        container: null,
         position: 'left'
     },
 
@@ -57,14 +57,19 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
      * @returns {Sidebar}
      */
     onAdd: function(map) {
-        var i, j, child, tabContainers, newContainer, container;
+        var i, child, tabContainers, newContainer, container;
 
-        // Find sidebar HTMLElement via ID, create it if none was found
+        // use the container given via options.
         container = typeof this.options.container === 'string'
           ? L.DomUtil.get(this.options.container)
           : this.options.container;
-        if (!container)
+
+        // if no container was specified or not found, create it and apply an ID
+        if (!container) {
             container = L.DomUtil.create('div', 'leaflet-sidebar collapsed');
+            if (typeof this.options.container === 'string')
+                container.id = this.options.container;
+        }
 
         // Find paneContainer in DOM & store reference
         this._paneContainer = container.querySelector('div.leaflet-sidebar-content');
@@ -124,6 +129,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
             this._tabClick(this._tabitems[i], 'on');
         }
 
+        // leaflet moves the returned container to the right place in the DOM
         return container;
     },
 
