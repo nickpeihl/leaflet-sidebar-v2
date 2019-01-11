@@ -1,6 +1,10 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.0.5 (2019-01-11)
+- apply container ID if specified in constructor options and not existing (#27)
+- fix wrongly initialized caret for `position: right` (#28)
+
 ## v3.0.4 (2018-12-10)
 - fix type definition (#24)
 
