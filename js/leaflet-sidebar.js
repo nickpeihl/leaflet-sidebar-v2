@@ -379,7 +379,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
             if (this._panes[i].id === id) {
                 pane = this._panes[i];
                 closeButtons = pane.querySelectorAll('.leaflet-sidebar-close');
-                for (j = 0; i < closeButtons.length; j++) {
+                for (j = 0; j < closeButtons.length; j++) {
                     this._closeClick(closeButtons[j], 'off');
                 }
 
