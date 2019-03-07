@@ -176,6 +176,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         // when adding to the map container, we should stop event propagation
         L.DomEvent.disableScrollPropagation(this._container);
         L.DomEvent.disableClickPropagation(this._container);
+        L.DomEvent.on(this._container, 'contextmenu', L.DomEvent.stopPropagation);
 
         // insert as first child of map container (important for css)
         map._container.insertBefore(this._container, map._container.firstChild);
