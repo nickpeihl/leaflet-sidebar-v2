@@ -11,7 +11,7 @@ A responsive sidebar _just_ for [Leaflet](http://leafletjs.com/). A fork of [sid
 - only supports leaflet (0.x and 1.x) to maintain a smaller codebase and support more features
 - compatibility with bootstrap (no generic `.sidebar` class)
 - provide a npm package `leaflet-sidebar-v2` with `main` and `style` fields in [`package.json`](package.json)
-    
+
 ## Examples
 in `examples` folder, available live at <https://nickpeihl.github.io/leaflet-sidebar-v2/examples>
 
@@ -52,7 +52,7 @@ sidebar.addPanel({
     button: 'https://github.com/nickpeihl/leaflet-sidebar-v2',
 });
 
-/* add an button with click listener */
+/* add a button with click listener */
 sidebar.addPanel({
     id: 'click',
     tab: '<i class="fa fa-info"></i>',
@@ -79,9 +79,12 @@ sidebar.close();
 #### remove sidebar
 
 ```js
-/* remove the sidebar (and destroy the sidebar container!) */
+/* remove the sidebar (keeping the sidebar container) */
 sidebar.remove();
 sidebar.removeFrom(map); // leaflet 0.x
+
+/* to clear the sidebar state, remove the container reference */
+sidebar._container = null
 ```
 
 ### markup

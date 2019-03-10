@@ -59,10 +59,15 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
     onAdd: function(map) {
         var i, child, tabContainers, newContainer, container;
 
+        // use container from previous onAdd()
+        container = this._container
+
         // use the container given via options.
-        container = typeof this.options.container === 'string'
-          ? L.DomUtil.get(this.options.container)
-          : this.options.container;
+        if (!container) {
+            container = this._container || typeof this.options.container === 'string'
+            ? L.DomUtil.get(this.options.container)
+            : this.options.container;
+        }
 
         // if no container was specified or not found, create it and apply an ID
         if (!container) {
