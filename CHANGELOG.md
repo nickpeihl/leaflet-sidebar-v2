@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.1.1 (2019-03-10)
+- update minified version
+
 ## v3.1.0 (2019-03-10)
 - restore container state in onAdd() when added previously
 - don't pass right-click events to map container (#33)
