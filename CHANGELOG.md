@@ -1,6 +1,13 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.1.0 (2019-03-10)
+- restore container state in onAdd() when added previously
+- don't pass right-click events to map container (#33)
+
+## v3.0.7 (2019-02-19)
+- fix in removePanel() (#32)
+
 ## v3.0.6 (2019-01-11)
 - fix regression from v3.0.5
 
