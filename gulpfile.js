@@ -13,20 +13,19 @@ var basename = pkg.name + '-' + pkg.version;
 // SASS compilation
 gulp.task('sass', function () {
     return gulp.src('scss/*sidebar.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
+        .on('error', sass.logError)
         .pipe(gulp.dest('css'));
 });
 
 // Lint JS + CSS
-gulp.task('lint', ['lint:js', 'lint:css']);
-
 gulp.task('lint:js', function() {
   return gulp.src('js/*sidebar.js')
     .pipe(jshint())
     .pipe(jshint.reporter());
 });
 
-gulp.task('lint:css', ['sass'], function() {
+gulp.task('lint:css', gulp.series('sass', function() {
   return gulp.src('css/*sidebar.css')
     .pipe(csslint({
       'adjoining-classes': false,
@@ -37,11 +36,11 @@ gulp.task('lint:css', ['sass'], function() {
       'regex-selectors': false,
     }))
     .pipe(csslint.formatter());
-});
+}));
+
+gulp.task('lint', gulp.parallel('lint:js', 'lint:css'));
 
 // Minify JS + CSS
-gulp.task('minify', ['minify:js', 'minify:css']);
-
 gulp.task('minify:js', function() {
   return gulp.src('js/*sidebar.js')
     .pipe(rename({ suffix: '.min' }))
@@ -49,15 +48,17 @@ gulp.task('minify:js', function() {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task('minify:css', ['sass'], function() {
+gulp.task('minify:css', gulp.series('sass', function() {
   return gulp.src('css/*sidebar.css')
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('css'));
-});
+}));
+
+gulp.task('minify', gulp.parallel('minify:js', 'minify:css'));
 
 // Package for distribution
-gulp.task('zip', ['minify'], function() {
+gulp.task('zip', gulp.series('minify', function() {
   return gulp.src([
     'README.md',
     'LICENSE',
@@ -69,13 +70,13 @@ gulp.task('zip', ['minify'], function() {
   }))
   .pipe(zip(basename + '.zip'))
   .pipe(gulp.dest('dist'));
-});
+}));
 
 // Watch JS + CSS Files
-gulp.task('watch', ['lint', 'minify'], function(){
+gulp.task('watch', gulp.series('lint', 'minify', function() {
   gulp.watch('js/leaflet-sidebar.js', ['lint:js', 'minify:js']);
   gulp.watch('scss/*.scss', ['lint:css', 'minify:css']);
-});
+}));
 
 // Default
-gulp.task('default', ['lint', 'minify']);
+gulp.task('default', gulp.series('lint', 'minify'));
