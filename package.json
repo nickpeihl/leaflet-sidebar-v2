@@ -30,7 +30,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "gulp-zip": "^4.2.0",
+    "gulp-zip": "^5.0.0",
     "jshint": "^2.9.6"
   },
   "scripts": {
