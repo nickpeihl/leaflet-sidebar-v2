@@ -489,7 +489,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
                 return this._tabitems[i];
         }
 
-        return null;
+        throw Error('tab "' + id + '" not found');
     },
 
     /**
