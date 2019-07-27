@@ -147,7 +147,6 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
     onRemove: function (map) {
         var i;
 
-        this._map = null;
         this._tabitems = [];
         this._panes = [];
         this._closeButtons = [];
