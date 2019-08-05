@@ -81,13 +81,7 @@ $tab-active-bg: #0074d9 !default;
   }
 
   &.collapsed ~ .leaflet-control-container .leaflet-right {
-    @media (min-width: $threshold-sm) {
-      right: $tab-size + $sidebar-margins;
-    }
-
-    @media (max-width: $threshold-sm) {
-      right: $tab-size + $sidebar-margins;
-    }
+    right: $tab-size + $sidebar-margins;
   }
 }
 
@@ -116,12 +110,6 @@ $tab-active-bg: #0074d9 !default;
   }
 
   &.collapsed ~ .leaflet-control-container .leaflet-left {
-    @media (min-width: $threshold-sm) {
-      left: $tab-size + $sidebar-margins;
-    }
-
-    @media (max-width: $threshold-sm) {
-      left: $tab-size + $sidebar-margins;
-    }
+    left: $tab-size + $sidebar-margins;
   }
 }
