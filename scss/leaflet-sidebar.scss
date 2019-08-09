@@ -50,9 +50,7 @@ $tab-active-bg: #0074d9 !default;
   }
 
   &.collapsed ~ .leaflet-control-container .leaflet-left {
-    @media (min-width: $threshold-sm) {
-      left: $tab-size + $sidebar-margins;
-    }
+    left: $tab-size + $sidebar-margins;
   }
 }
 
@@ -82,34 +80,5 @@ $tab-active-bg: #0074d9 !default;
 
   &.collapsed ~ .leaflet-control-container .leaflet-right {
     right: $tab-size + $sidebar-margins;
-  }
-}
-
-.leaflet-sidebar-left {
-  &.leaflet-touch {
-    box-shadow: none;
-    border-left: $sidebar-touch-border;
-  }
-
-  & ~ .leaflet-control-container .leaflet-left {
-    @media (min-width: $threshold-sm) {
-      transition: left $sidebar-transition;
-    }
-
-    @media (min-width: $threshold-sm) and (max-width: $threshold-md - 1px) {
-      left: $width-sm + $sidebar-margins;
-    }
-
-    @media (min-width: $threshold-md) and (max-width: $threshold-lg - 1px) {
-      left: $width-md + $sidebar-margins;
-    }
-
-    @media (min-width: $threshold-lg) {
-      left: $width-lg + $sidebar-margins;
-    }
-  }
-
-  &.collapsed ~ .leaflet-control-container .leaflet-left {
-    left: $tab-size + $sidebar-margins;
   }
 }
