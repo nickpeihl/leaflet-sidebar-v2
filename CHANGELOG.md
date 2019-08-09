@@ -1,6 +1,16 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.2.1 (2019-08-09)
+- zoom panel will be not hidden when mobile (#39)
+- fix border for right-aligned (#39)
+- simplify scss (#39)
+
+## v3.2.0 (2019-07-10)
+- leaflet v1.5.0 compatibility
+- throw if tab with given ID is not found 
+- fix click event removal
+
 ## v3.1.1 (2019-03-10)
 - update minified version
 
