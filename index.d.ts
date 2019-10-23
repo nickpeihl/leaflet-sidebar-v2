@@ -23,13 +23,13 @@ declare module 'leaflet' {
             title?: string,
         }
 
-        type SidebarEvents = 'opening' | 'closing' | 'content'
+        // type SidebarEvents = 'opening' | 'closing' | 'content'
 
-        type SidebarEventHandlerFnMap = {
-            'opening'?: L.LeafletEventHandlerFn,
-            'closing'?: L.LeafletEventHandlerFn,
-            'content'?: L.LeafletEventHandlerFn,
-        }
+        // type SidebarEventHandlerFnMap = {
+        //     'opening'?: L.LeafletEventHandlerFn,
+        //     'closing'?: L.LeafletEventHandlerFn,
+        //     'content'?: L.LeafletEventHandlerFn,
+        // }
 
         export class Sidebar extends L.Evented { // extends L.Control { // FIXME
             constructor(options?: SidebarOptions);
@@ -47,8 +47,8 @@ declare module 'leaflet' {
             enablePanel(id: string): this;
             disablePanel(id: string): this;
 
-            on(type: SidebarEvents, fn: L.LeafletEventHandlerFn, context?: any): this;
-            on(eventMap: SidebarEventHandlerFnMap): this;
+            // on(type: SidebarEvents, fn: L.LeafletEventHandlerFn, context?: any): this;
+            // on(eventMap: SidebarEventHandlerFnMap): this;
         }
 
     }
