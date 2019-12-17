@@ -4,9 +4,15 @@ import * as L from 'leaflet';
 
 declare module 'leaflet' {
 
+    type SidebarOptions = L.Control.SidebarOptions;
+    type PanelOptions = L.Control.PanelOptions;
+    type SidebarEvents = L.Control.SidebarEvents;
+    type SidebarEventHandlerFnMap = L.Control.SidebarEventHandlerFnMap;
+
+
     namespace Control {
 
-        interface SidebarOptions { // extends L.ControlOptions { // FIXME
+        interface SidebarOptions extends Omit<L.ControlOptions, 'position'>{ 
             container?: HTMLElement | string,
             position?: 'left' | 'right',
             autopan?: boolean,
@@ -31,9 +37,8 @@ declare module 'leaflet' {
             'content'?: L.LeafletEventHandlerFn,
         }
 
-        export class Sidebar extends L.Evented { // extends L.Control { // FIXME
+        export class Sidebar extends L.Control { 
             constructor(options?: SidebarOptions);
-            options: SidebarOptions;
 
             addTo(map: L.Map): this;
             removeFrom(map: L.Map): this;
