@@ -1,13 +1,14 @@
 # leaflet-sidebar-v2
 
-A responsive sidebar _just_ for [Leaflet](http://leafletjs.com/). A fork of [sidebar-v2](http://turbo87.github.io/sidebar-v2) that only contains the necessary ingredients for use in Leaflet and provides enhanced functionality.
+A responsive sidebar for [Leaflet](http://leafletjs.com/). A fork of [sidebar-v2](http://turbo87.github.io/sidebar-v2) that only contains the necessary ingredients for use in Leaflet and provides enhanced functionality.
 
 ![Demo](doc/leaflet-sidebar-v2.gif)
 
+> **Hint**: There's a Angular wrapper available at https://github.com/runette/ngx-leaflet-sidebar
+
 ## Why the Fork?
-- new features based on leaflet.js
-    - JS API for panel modification
-    - "autopan" feature, moving the map content next to the sidebar content
+- JS API for panel modification
+- "autopan" feature, moving the map content next to the sidebar content
 - only supports leaflet (0.x and 1.x) to maintain a smaller codebase and support more features
 - compatibility with bootstrap (no generic `.sidebar` class)
 - provide a npm package `leaflet-sidebar-v2` with `main` and `style` fields in [`package.json`](package.json)
