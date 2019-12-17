@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.2.2 (2019-12-17)
+- fix angular builds (#45)
+
 ## v3.2.1 (2019-08-09)
 - zoom panel will be not hidden when mobile (#39)
 - fix border for right-aligned (#39)
