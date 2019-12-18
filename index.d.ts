@@ -39,23 +39,24 @@ declare module 'leaflet' {
 
         export class Sidebar extends L.Control { 
             constructor(options?: SidebarOptions);
-
-            addTo(map: L.Map): this;
-            removeFrom(map: L.Map): this;
-
-            open(id: string): this;
-            close(): this;
-
-            addPanel(data: PanelOptions): this;
-            removePanel(id: string): this;
-
-            enablePanel(id: string): this;
-            disablePanel(id: string): this;
-
-            on(type: SidebarEvents, fn: L.LeafletEventHandlerFn, context?: any): this;
-            on(eventMap: SidebarEventHandlerFnMap): this;
         }
+    }
 
+    interface Control {
+        addTo(map: L.Map): this;
+        removeFrom(map: L.Map): this;
+
+        open(id: string): this;
+        close(): this;
+
+        addPanel(data: PanelOptions): this;
+        removePanel(id: string): this;
+
+        enablePanel(id: string): this;
+        disablePanel(id: string): this;
+
+        on(type: SidebarEvents, fn: L.LeafletEventHandlerFn, context?: any): this;
+        on(eventMap: SidebarEventHandlerFnMap): this;
     }
 
     namespace control {
