@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://github.com/nickpeihl/leaflet-sidebar-v2",
   "authors": [
+    "Norwin Roosen <bugs@nroo.de>",
     "Tobias Bieniek <tobias.bieniek@qsc.de>",
     "Nick Peihl <nickpeihl@gmail.com>"
   ],

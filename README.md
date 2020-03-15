@@ -14,7 +14,7 @@ A responsive sidebar for [Leaflet](http://leafletjs.com/). A fork of [sidebar-v2
 - provide a npm package `leaflet-sidebar-v2` with `main` and `style` fields in [`package.json`](package.json)
 
 ## Examples
-in `examples` folder, available live at <https://nickpeihl.github.io/leaflet-sidebar-v2/examples>
+in `examples` folder, available live at <https://noerw.github.io/leaflet-sidebar-v2/examples>
 
 ## Usage
 
@@ -50,7 +50,7 @@ sidebar.addPanel(panelContent);
 sidebar.addPanel({
     id: 'ghlink',
     tab: '<i class="fa fa-github"></i>',
-    button: 'https://github.com/nickpeihl/leaflet-sidebar-v2',
+    button: 'https://github.com/noerw/leaflet-sidebar-v2',
 });
 
 /* add a button with click listener */

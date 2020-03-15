@@ -13,9 +13,9 @@
   "homepage": "https://github.com/nickpeihl/leaflet-sidebar-v2",
   "bugs": "https://github.com/nickpeihl/leaflet-sidebar-v2/issues",
   "license": "MIT",
-  "author": "Tobias Bieniek <tobias.bieniek@gmx.de>",
+  "author": "Norwin Roosen <bugs@nroo.de>",
   "contributors": [
-    "Norwin <noerw@gmx.de> (http://github.com/noerw)",
+    "Tobias Bieniek <tobias.bieniek@gmx.de>",
     "Nick Peihl <nickpeihl@gmail.com>"
   ],
   "repository": {
