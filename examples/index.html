@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         crossorigin=""/>
 
     <link rel="stylesheet" href="../css/leaflet-sidebar.css" />
@@ -56,8 +55,8 @@
                     <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
                 </h1>
 
-                <p>A responsive sidebar for the mapping library <a href="http://leafletjs.com/">Leaflet</a>.</p>
-                <p>Compatible with version 0.7 and 1.x (tested up to 1.2.0)</p>
+                <p>A responsive sidebar for the mapping library <a href="https://leafletjs.com/">Leaflet</a>.</p>
+                <p>Compatible with version 0.7 and 1.x (tested up to 1.6.0)</p>
                 <p><b>Select the other panes for a showcase of each feature.</b></p>
 
                 <h2>More examples</h2>
@@ -99,8 +98,7 @@
 
     <a href="https://github.com/nickpeihl/leaflet-sidebar-v2/"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         crossorigin=""></script>
     <script src="../js/leaflet-sidebar.js"></script>
 
@@ -108,7 +106,7 @@
         // standard leaflet map setup
         var map = L.map('map');
         map.setView([51.2, 7], 9);
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: 'Map data &copy; OpenStreetMap contributors'
         }).addTo(map);
