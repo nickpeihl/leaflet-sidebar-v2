@@ -1,6 +1,9 @@
 # Changelog
 This project adheres to semantic versioning.
 
+## v3.2.3 (2020-05-18)
+- fix IE & android 4 compatibility (#19, #54)
+
 ## v3.2.2 (2019-12-17)
 - fix angular builds (#45)
 
