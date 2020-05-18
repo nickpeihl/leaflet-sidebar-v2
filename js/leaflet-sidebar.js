@@ -46,7 +46,8 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         this._panes = [];
         this._closeButtons = [];
 
-        L.setOptions(this, Object.assign({}, options, deprecatedOptions));
+        L.setOptions(this, options);
+        L.setOptions(this, deprecatedOptions);
         return this;
     },
 
